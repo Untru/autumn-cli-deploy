@@ -8,8 +8,9 @@
 title: Приложение для Деплоя
 ---
 classDiagram
-    note "From Duck till Zebra"
+    note "Публичный интерфейс"
     Commit <|-- Main
+  NewBranche <|-- Main
    class Main{
         +Commit()
         +NewBranche()
@@ -17,6 +18,10 @@ classDiagram
     }
     class Commit{
         +Фиксация изменеий()
+    }
+    class NewBranche{
+        +Создание ветки()
+        +Декомпиляция обработок()
     }
 
 ```
