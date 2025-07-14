@@ -1,0 +1,11 @@
+stages:
+  - modify_file
+
+modify_file_job:
+  stage: modify_file
+  script:
+    - bash ./scripts/modify_file.sh
+  tags:
+    - sonar
+  only:
+    - main  # Укажите вашу основную ветку, например, master или main
