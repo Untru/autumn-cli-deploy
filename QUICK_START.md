@@ -51,9 +51,9 @@ oscript main.os init \
 ### Сценарий 1: Создание новой ветки для разработки
 
 ```bash
-oscript main.os branche \
+oscript main.os Branch \
   --PathRepository="C:\Projects\MyProject" \
-  --NewBranche="feature/new-processing" \
+  --NewBranch="feature/new-processing" \
   --NameDB="MyDatabase" \
   --UsrLogin1c="admin" \
   --UsrPswd1c="password" \

@@ -253,9 +253,9 @@ param(
 $RepoPath = "C:\Projects\WMS_Project"
 $DbName = "WMS_Development"
 
-& oscript main.os branche `
+& oscript main.os Branch `
   --PathRepository="$RepoPath" `
-  --NewBranche="$BranchName" `
+  --NewBranch="$BranchName" `
   --NameDB="$DbName" `
   --UsrLogin1c="$env:USR_LOGIN_1C" `
   --UsrPswd1c="$env:USR_PSWD_1C" `
@@ -359,9 +359,9 @@ main "$@"
 
 1. **Создание ветки**
 ```bash
-oscript main.os branche \
+oscript main.os Branch \
   --PathRepository="C:\Projects\WMS_Project" \
-  --NewBranche="test-branch" \
+  --NewBranch="test-branch" \
   --NameDB="WMS_Development" \
   --UsrLogin1c="admin" \
   --UsrPswd1c="password" \

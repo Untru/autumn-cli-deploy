@@ -89,12 +89,12 @@ oscript main.os init --PathRepository="C:\Projects\MyProject" --PathRemoteReposi
 oscript main.os commit --PathRepository="C:\Projects\MyProject" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --Extensions="Aelita,ToolsWorld" --TextCommit="Обновление обработок" --UrlRemoteRepository="https://gitlab.com/company/myproject.git" --TokenConnectionGitLab="your-token" --IdProject="123" --MethodLoadDB="ibcmd" --LoadDB="true" --CommitAuthor="Developer"
 ```
 
-#### `branche` - Создание и настройка ветки
+#### `Branch` - Создание и настройка ветки
 Создает новую ветку из develop, обновляет конфигурацию и компилирует обработки.
 
 **Параметры:**
 - `PathRepository` - Путь к репозиторию
-- `NewBranche` - Имя новой ветки
+- `NewBranch` - Имя новой ветки
 - `NameDB` - Имя информационной базы
 - `UsrLogin1c` - Имя пользователя 1С
 - `UsrPswd1c` - Пароль пользователя 1С
@@ -117,24 +117,24 @@ oscript main.os commit --PathRepository="C:\Projects\MyProject" --NameDB="MyData
 
 **Пример:**
 ```bash
-oscript main.os branche --PathRepository="C:\Projects\MyProject" --NewBranche="feature/new-processing" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --NamesDataProcessors="MyProcessing1,MyProcessing2" --Extensions="Aelita,ToolsWorld" --LoadDB="true" --MethodLoadDB="ibcmd"
+oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="feature/new-processing" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --NamesDataProcessors="MyProcessing1,MyProcessing2" --Extensions="Aelita,ToolsWorld" --LoadDB="true" --MethodLoadDB="ibcmd"
 ```
 
 ### 🔄 Дополнительные команды
 
-#### `branche-develop` - Переход на ветку develop
+#### `Branch-develop` - Переход на ветку develop
 Переключается на ветку develop и обновляет конфигурацию.
 
-#### `branche-from-develop` - Создание ветки из develop
+#### `Branch-from-develop` - Создание ветки из develop
 Создает новую ветку из develop с обновлением конфигурации.
 
-#### `branche-to-develop` - Слияние в develop
+#### `Branch-to-develop` - Слияние в develop
 Выполняет слияние текущей ветки в develop.
 
 #### `build-release` - Сборка релиза
 Создает релизную сборку конфигурации.
 
-#### `create-branche` - Создание ветки
+#### `create-Branch` - Создание ветки
 Создает новую ветку без дополнительных операций.
 
 #### `create-merge-request` - Создание merge request
@@ -214,7 +214,7 @@ devops/
 ├── src/
 │   ├── Классы/           # Классы команд
 │   │   ├── КомандаCommit.os
-│   │   ├── КомандаBranche.os
+│   │   ├── КомандаBranch.os
 │   │   ├── КомандаInit.os
 │   │   └── ...
 │   └── Модули/           # Вспомогательные модули

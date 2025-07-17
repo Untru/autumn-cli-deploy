@@ -45,9 +45,9 @@ oscript main.os commit \
 
 #### Создание ветки для новой функциональности
 ```bash
-oscript main.os branche \
+oscript main.os Branch \
   --PathRepository="C:\Projects\WMS_Project" \
-  --NewBranche="feature/warehouse-zones" \
+  --NewBranch="feature/warehouse-zones" \
   --NameDB="WMS_Development" \
   --UsrLogin1c="admin" \
   --UsrPswd1c="admin123" \
@@ -127,7 +127,7 @@ oscript main.os update-db-data-processors \
 
 #### Переход на ветку develop
 ```bash
-oscript main.os branche-develop \
+oscript main.os Branch-develop \
   --PathRepository="C:\Projects\WMS_Project" \
   --NameDB="WMS_Development" \
   --UsrLogin1c="admin" \
@@ -146,7 +146,7 @@ oscript main.os branche-develop \
 
 #### Слияние в develop
 ```bash
-oscript main.os branche-to-develop \
+oscript main.os Branch-to-develop \
   --PathRepository="C:\Projects\WMS_Project" \
   --NameDB="WMS_Development" \
   --UsrLogin1c="admin" \
@@ -275,9 +275,9 @@ $UserPswd = "admin123"
 
 Write-Host "Creating branch: $BranchName" -ForegroundColor Green
 
-& oscript main.os branche `
+& oscript main.os Branch `
   --PathRepository="$RepoPath" `
-  --NewBranche="$BranchName" `
+  --NewBranch="$BranchName" `
   --NameDB="$DbName" `
   --UsrLogin1c="$UserLogin" `
   --UsrPswd1c="$UserPswd" `

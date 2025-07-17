@@ -13,7 +13,7 @@ graph TB
     C --> D[Модули]
     
     C --> C1[КомандаCommit]
-    C --> C2[КомандаBranche]
+    C --> C2[КомандаBranch]
     C --> C3[КомандаInit]
     C --> C4[Другие команды...]
     
@@ -100,7 +100,7 @@ graph TB
 - `TextCommit` - Текст коммита
 - `LoadDB` - Обновлять базу из файлов
 
-#### `branche` - Создание ветки
+#### `Branch` - Создание ветки
 **Назначение:** Создание новой ветки с обновлением конфигурации.
 
 **Алгоритм выполнения:**
@@ -114,7 +114,7 @@ graph TB
 8. Обновление обработок в конфигурации
 
 **Ключевые параметры:**
-- `NewBranche` - Имя новой ветки
+- `NewBranch` - Имя новой ветки
 - `NamesDataProcessors` - Обработки для компиляции
 - `LoadDB` - Обновлять базу из файлов
 
@@ -227,33 +227,33 @@ sequenceDiagram
     Commit->>User: "Обработка завершена"
 ```
 
-### Поток выполнения команды branche
+### Поток выполнения команды Branch
 ```mermaid
 sequenceDiagram
     participant User
     participant CLI
-    participant Branche
+    participant Branch
     participant Git
     participant Cluster
     participant Configurator
     participant DB
 
-    User->>CLI: branche --parameters
-    CLI->>Branche: ОбработатьКоманду()
-    Branche->>Branche: ИнициализироватьНастройки()
-    Branche->>Git: ИнициализироватьГит()
-    Branche->>Cluster: ИнициализироватьКластер()
-    Branche->>Configurator: ИнициализироватьКонфигуратор()
+    User->>CLI: Branch --parameters
+    CLI->>Branch: ОбработатьКоманду()
+    Branch->>Branch: ИнициализироватьНастройки()
+    Branch->>Git: ИнициализироватьГит()
+    Branch->>Cluster: ИнициализироватьКластер()
+    Branch->>Configurator: ИнициализироватьКонфигуратор()
     
-    Branche->>Git: ПерейтиНаВеткуИзДевелоп()
-    Branche->>Cluster: ЗаблокироватьБазу()
-    Branche->>Configurator: ОбновитьБазуИзФайлов()
-    Branche->>Configurator: ЗагрузитьРасширенияИзФайлов()
-    Branche->>Configurator: СобратьОбработки()
-    Branche->>Cluster: РазблокироватьБазу()
-    Branche->>Configurator: ОбновитьОбработкиВКонфигурации()
+    Branch->>Git: ПерейтиНаВеткуИзДевелоп()
+    Branch->>Cluster: ЗаблокироватьБазу()
+    Branch->>Configurator: ОбновитьБазуИзФайлов()
+    Branch->>Configurator: ЗагрузитьРасширенияИзФайлов()
+    Branch->>Configurator: СобратьОбработки()
+    Branch->>Cluster: РазблокироватьБазу()
+    Branch->>Configurator: ОбновитьОбработкиВКонфигурации()
     
-    Branche->>User: "Обработка завершена"
+    Branch->>User: "Обработка завершена"
 ```
 
 ## 🔧 Конфигурация и настройки
