@@ -203,10 +203,6 @@
 	НастройкиВыполнения.Вставить("UserStorage", UserStorage);
 	НастройкиВыполнения.Вставить("NameDBWeb", NameDBWeb);
 	НастройкиВыполнения.Вставить("ServerDBWeb", ServerDBWeb);
-	НастройкиВыполнения.Вставить("PathStorageAelita", PathStorageAelita);
-	НастройкиВыполнения.Вставить("UserStorageAelita", UserStorageAelita);
-	НастройкиВыполнения.Вставить("PathStorageToolsWorld", PathStorageToolsWorld);
-	НастройкиВыполнения.Вставить("UserStorageToolsWorld", UserStorageToolsWorld);		
 
 	Возврат НастройкиВыполнения;
 

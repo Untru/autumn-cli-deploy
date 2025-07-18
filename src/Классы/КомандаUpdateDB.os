@@ -67,18 +67,6 @@
 &Опция(Имя = "ServerDBWeb", Описание = "Сервер опубликованной базы")
 Перем ServerDBWeb;
 
-&Опция(Имя = "PathStorageAelita", Описание = "Путь к хранилищу Aelita")
-Перем PathStorageAelita;
-
-&Опция(Имя = "UserStorageAelita", Описание = "Пользователь хранилища Aelita")
-Перем UserStorageAelita;
-
-&Опция(Имя = "PathStorageToolsWorld", Описание = "Путь к хранилищу Toolsworld")
-Перем PathStorageToolsworld;
-
-&Опция(Имя = "UserStorageToolsWorld", Описание = "Пользователь хранилища Toolsworld")
-Перем UserStorageToolsworld;
-
 
 &КомандаПриложения(Имя = "UpdateDB")
 Процедура ПриСозданииОбъекта()
@@ -134,10 +122,7 @@
 	НастройкиВыполнения.Вставить("UserStorage", UserStorage);
 	НастройкиВыполнения.Вставить("NameDBWeb", NameDBWeb);
 	НастройкиВыполнения.Вставить("ServerDBWeb", ServerDBWeb);
-	НастройкиВыполнения.Вставить("PathStorageAelita", PathStorageAelita);
-	НастройкиВыполнения.Вставить("UserStorageAelita", UserStorageAelita);
-	НастройкиВыполнения.Вставить("PathStorageToolsWorld", PathStorageToolsWorld);
-	НастройкиВыполнения.Вставить("UserStorageToolsWorld", UserStorageToolsWorld);
+
 	Возврат НастройкиВыполнения;
 	
 КонецФункции
