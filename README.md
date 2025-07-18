@@ -89,7 +89,7 @@ oscript main.os init --PathRepository="C:\Projects\MyProject" --PathRemoteReposi
 
 **Пример:**
 ```bash
-oscript main.os commit --PathRepository="C:\Projects\MyProject" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --Extensions="Aelita,ToolsWorld" --TextCommit="Обновление обработок" --UrlRemoteRepository="https://gitlab.com/company/myproject.git" --TokenConnectionGitLab="your-token" --IdProject="123" --MethodLoadDB="ibcmd" --LoadDB="true" --CommitAuthor="Developer"
+oscript main.os commit --PathRepository="C:\Projects\MyProject" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --Extensions="Расширение1,Расширение2" --TextCommit="Обновление обработок" --UrlRemoteRepository="https://gitlab.com/company/myproject.git" --TokenConnectionGitLab="your-token" --IdProject="123" --MethodLoadDB="ibcmd" --LoadDB="true" --CommitAuthor="Developer"
 ```
 
 #### `Branch` - Создание и настройка ветки
@@ -120,7 +120,7 @@ oscript main.os commit --PathRepository="C:\Projects\MyProject" --NameDB="MyData
 
 **Пример:**
 ```bash
-oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="feature/new-processing" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --NamesDataProcessors="MyProcessing1,MyProcessing2" --Extensions="Aelita,ToolsWorld" --LoadDB="true" --MethodLoadDB="ibcmd"
+oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="feature/new-processing" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --NamesDataProcessors="MyProcessing1,MyProcessing2" --Extensions="Расширение1,Расширение2" --LoadDB="true" --MethodLoadDB="ibcmd"
 ```
 
 ### 🔄 Дополнительные команды
@@ -186,6 +186,7 @@ oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="fea
 
 ### Переменные окружения
 Для безопасности рекомендуется использовать переменные окружения для хранения паролей и токенов:
+
 
 ```bash
 # Windows
