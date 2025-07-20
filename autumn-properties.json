@@ -6,7 +6,7 @@
     },
     "logos": {
         "logger": {
-            "oscript.lib.pivocli": {"level":"DEBUG", "stringlayout":"%Уровень%:%ДатаВремя% - %Сообщение%"}
+            "oscript.lib.pivocli": {"level":"DEBUG", "stringlayout":"%Уровень%: %ДатаВремя% - %Сообщение%"}
         }
     }
 }
