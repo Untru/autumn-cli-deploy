@@ -10,7 +10,7 @@
             "type": "oscript",
             "request": "launch",
             "program": "main.os",
-            "args": [],
+            "args": ["init", "--UserName", "Pavel", "--PathRepository", "Pavel"],
             "cwd": "${workspaceRoot}",
             "env": {},
             "runtimeExecutable": null,
