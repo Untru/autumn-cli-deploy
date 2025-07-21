@@ -7,6 +7,7 @@
         .ВключитьФайл("src")
         .ВключитьФайл("main.os")
         .ВключитьФайл("packagedef")
+        .ВключитьФайл("autumn-properties.json")
         .ЗависитОт("autumn")
         .ЗависитОт("autumn-cli")        
         .ЗависитОт("autumn-logos")
