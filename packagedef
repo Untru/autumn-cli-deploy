@@ -6,6 +6,7 @@
         .ВерсияСреды("1.9.2")
         .ВключитьФайл("src")
         .ВключитьФайл("main.os")
+        .ВключитьФайл("autumn-properties.json")
         .ВключитьФайл("packagedef")
         .ВключитьФайл("autumn-properties.json")
         .ЗависитОт("autumn")
