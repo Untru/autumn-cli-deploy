@@ -47,10 +47,11 @@
 &Опция(Имя = "MethodLoadDB", Описание = "ibcmd / designer")
 Перем MethodLoadDB;
 
-&Опция(Имя = "NamesUpdateDB", Описание = "Пример st-serv-dev-01$TEST_WMS83ST_LDC$user$password, st-serv-dev-01$TEST_WMS83ST_KDO$user$password")
+&Опция(Имя = "NamesUpdateDB", Описание = "Пример localhost$DemoBase$user$password, localhost$DemoBase2$user$password")
 Перем NamesUpdateDB;
 
-&КомандаПриложения(Имя = "UpdateDataProcessors")
+&КомандаПриложения(Имя = "UpdateDataProcessors", Описание = "По списку баз обновляются внешние отчеты и обработки 
+|                                        ожидается что файлы будут отправляться на endpoint 'import_file?object_name=..&extension=..'")
 Процедура ПриСозданииОбъекта()
 		
 КонецПроцедуры

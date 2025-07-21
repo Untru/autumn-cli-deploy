@@ -123,6 +123,12 @@ oscript main.os commit --PathRepository="C:\Projects\MyProject" --NameDB="MyData
 oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="feature/new-processing" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --NamesDataProcessors="MyProcessing1,MyProcessing2" --Extensions="Расширение1,Расширение2" --LoadDB="true" --MethodLoadDB="ibcmd"
 ```
 
+Возможно делать обновление обработок в базе, для этого у базы должен быть опубликован сервис, пример кода загрузки:
+```bsl
+Тут будет пример кода.
+
+```
+
 ### 🔄 Дополнительные команды
 
 #### `Branch-develop` - Переход на ветку develop
