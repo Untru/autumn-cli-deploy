@@ -23,6 +23,9 @@
 &Опция(Имя = "PathServer1с", Описание = "Путь к серверу 1с")
 Перем PathServer1с;
 
+&Опция(Имя = "PathServerRAS", Описание = "Путь к серверу RAS")
+Перем PathServerRAS;
+
 &Опция(Имя = "NumberPlatform", Описание = "Номер версии платформы 1с")
 Перем NumberPlatform;
 
@@ -131,6 +134,7 @@
 	НастройкиВыполнения.Вставить("UsrLogin1c", UsrLogin1c);
 	НастройкиВыполнения.Вставить("UsrPswd1c", UsrPswd1c);
 	НастройкиВыполнения.Вставить("PathServer1с", PathServer1с);
+	НастройкиВыполнения.Вставить("PathServerRAS", PathServerRAS);
 	НастройкиВыполнения.Вставить("NumberPlatform", NumberPlatform);
 	НастройкиВыполнения.Вставить("TypeDB", TypeDB);
 	НастройкиВыполнения.Вставить("UsrLoginDB", UsrLoginDB);

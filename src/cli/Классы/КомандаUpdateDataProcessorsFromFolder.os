@@ -21,6 +21,9 @@
 &Опция(Имя = "PathServer1с", Описание = "Путь к серверу 1с")
 Перем PathServer1с;
 
+&Опция(Имя = "PathServerRAS", Описание = "Путь к серверу RAS")
+Перем PathServerRAS;
+
 &Опция(Имя = "RunRas", Описание = "Запускать RAS")
 Перем RunRas;
 
@@ -69,6 +72,7 @@
 	НастройкиВыполнения.Вставить("UsrLogin1c", UsrLogin1c);
 	НастройкиВыполнения.Вставить("UsrPswd1c", UsrPswd1c);
 	НастройкиВыполнения.Вставить("PathServer1с", PathServer1с);
+	НастройкиВыполнения.Вставить("PathServerRAS", PathServerRAS);
 	НастройкиВыполнения.Вставить("NumberPlatform", NumberPlatform);
 	НастройкиВыполнения.Вставить("RunRas", RunRas);
 	НастройкиВыполнения.Вставить("NameDBWeb", NameDBWeb);
