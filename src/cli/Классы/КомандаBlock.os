@@ -17,6 +17,9 @@
 &Опция(Имя = "PathServer1с", Описание = "Путь к серверу 1c")
 Перем PathServer1с;
 
+&Опция(Имя = "PathServerRAS", Описание = "Путь к серверу RAS")
+Перем PathServerRAS;
+
 &Опция(Имя = "AccessCode", Описание = "Код доступа")
 Перем AccessCode;
 
@@ -52,6 +55,7 @@
 	НастройкиВыполнения.Вставить("UsrLogin1c", UsrLogin1c);
 	НастройкиВыполнения.Вставить("UsrPswd1c", UsrPswd1c);
 	НастройкиВыполнения.Вставить("PathServer1с", PathServer1с);	
+	НастройкиВыполнения.Вставить("PathServerRAS", PathServerRAS);	
 	НастройкиВыполнения.Вставить("NameDB", NameDB);
 	НастройкиВыполнения.Вставить("AccessCode", AccessCode);
 
