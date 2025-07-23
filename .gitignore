@@ -1,2 +1,3 @@
 *.ospx
 .vscode/
+.DS_Store
