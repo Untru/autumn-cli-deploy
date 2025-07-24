@@ -1,4 +1,4 @@
-# PIVO CLI - Консольное приложение для автоматизации разработки 1С
+# PIVO (Pivot + Integration + Version + Operations) CLI - Консольное приложение для автоматизации разработки 1С
 
 Консольное приложение на базе **autumn-cli** для автоматизации процессов разработки, сборки и деплоя конфигураций 1С:Предприятие. Приложение предоставляет набор команд для работы с Git-репозиториями, управления ветками, коммитами, сборки обработок и обновления баз данных.
 Работает совместно с 1с решением [GitManager](https://github.com/Untru/gitmanager)
@@ -32,13 +32,9 @@ oscript --version
 opm install pivo-cli
 ```
 
-3. Для запуска используйте batch-файл или напрямую:
+3. Для запуска:
 ```bash
-# Через batch-файл
-main.bat
-
-# Напрямую
-oscript main.os
+pivo-cli [КОМАНДА] --опции
 ```
 
 ## 📖 Команды приложения
@@ -56,7 +52,7 @@ oscript main.os
 
 **Пример:**
 ```bash
-oscript main.os init --PathRepository="C:\Projects\MyProject" --PathRemoteRepository="https://gitlab.com/company/myproject.git" --UserName="Developer" --UserEmail="dev@company.com"
+pivo-cli init --PathRepository="C:\Projects\MyProject" --PathRemoteRepository="https://gitlab.com/company/myproject.git" --UserName="Developer" --UserEmail="dev@company.com"
 ```
 
 #### `commit` - Создание коммита
@@ -89,7 +85,7 @@ oscript main.os init --PathRepository="C:\Projects\MyProject" --PathRemoteReposi
 
 **Пример:**
 ```bash
-oscript main.os commit --PathRepository="C:\Projects\MyProject" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --Extensions="Расширение1,Расширение2" --TextCommit="Обновление обработок" --UrlRemoteRepository="https://gitlab.com/company/myproject.git" --TokenConnectionGitLab="your-token" --IdProject="123" --MethodLoadDB="ibcmd" --LoadDB="true" --CommitAuthor="Developer"
+pivo-cli commit --PathRepository="C:\Projects\MyProject" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --Extensions="Расширение1,Расширение2" --TextCommit="Обновление обработок" --UrlRemoteRepository="https://gitlab.com/company/myproject.git" --TokenConnectionGitLab="your-token" --IdProject="123" --MethodLoadDB="ibcmd" --LoadDB="true" --CommitAuthor="Developer"
 ```
 
 #### `Branch` - Создание и настройка ветки
@@ -120,7 +116,7 @@ oscript main.os commit --PathRepository="C:\Projects\MyProject" --NameDB="MyData
 
 **Пример:**
 ```bash
-oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="feature/new-processing" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --NamesDataProcessors="MyProcessing1,MyProcessing2" --Extensions="Расширение1,Расширение2" --LoadDB="true" --MethodLoadDB="ibcmd"
+pivo-cli  Branch --PathRepository="C:\Projects\MyProject" --NewBranch="feature/new-processing" --NameDB="MyDatabase" --UsrLogin1c="admin" --UsrPswd1c="password" --PathServer1с="localhost" --NumberPlatform="8.3.11.1234" --TypeDB="MSSQLServer" --ServerDB="localhost" --UsrLoginDB="sa" --UsrPswdDB="password" --PathServerDB="localhost" --RunRas="true" --NamesDataProcessors="MyProcessing1,MyProcessing2" --Extensions="Расширение1,Расширение2" --LoadDB="true" --MethodLoadDB="ibcmd"
 ```
 
 Возможно делать обновление обработок в базе, для этого у базы должен быть опубликован сервис, пример кода загрузки:
@@ -138,7 +134,7 @@ oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="fea
 Создает новую ветку из develop с обновлением конфигурации.
 
 #### `Branch-to-develop` - Слияние в develop
-Выполняет слияние текущей ветки в develop.
+Переходит на девелоп, блокирует базу, если нужно, обновляет базу из хранилища, а так же обновляет обработки и расширения
 
 #### `build-release` - Сборка релиза
 Создает релизную сборку конфигурации.
@@ -158,7 +154,7 @@ oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="fea
 ### 📊 Команды для работы с обработками
 
 #### `make-data-processors` - Создание обработок
-Создает новые внешние обработки.
+Создает новые внешние обработки. Обработка создается по подготовленному шаблону в папке "Шаблоны"
 
 #### `update-data-processors` - Обновление обработок
 Обновляет существующие обработки.
@@ -167,10 +163,7 @@ oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="fea
 Обновляет обработки из указанной папки.
 
 #### `compile-data-processors` - Компиляция обработок
-Компилирует обработки.
-
-#### `new-data-processors` - Новые обработки
-Создает новые обработки с шаблонами.
+Компилирует обработки в указаной базе
 
 #### `update-db-data-processors` - Обновление обработок в БД
 Обновляет обработки в базе данных.
@@ -200,7 +193,6 @@ oscript main.os Branch --PathRepository="C:\Projects\MyProject" --NewBranch="fea
 ```
 pivo-cli/
 ├── main.os                 # Главный файл приложения
-├── main.bat               # Batch-файл для запуска
 ├── README.md              # Документация
 ├── ФайлНастроек.xml       # Настройки слияния конфигураций
 ├── packagedef             # Описание пакета

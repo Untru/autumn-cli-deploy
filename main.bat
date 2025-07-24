@@ -1,1 +1,0 @@
-oscript .\main.os
